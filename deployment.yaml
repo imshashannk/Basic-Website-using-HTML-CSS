@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-website-deployment
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: basic-website
+  template:
+    metadata:
+      labels:
+        app: basic-website
+    spec:
+      containers:
+      - name: basic-website-container
+        image: imshashannk/basic-website-using-html-css:latest
+        ports:
+        - containerPort: 80
