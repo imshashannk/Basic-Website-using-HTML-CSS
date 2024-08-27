@@ -1,2 +1,3 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html' > Dockerfile
+COPY . /usr/share/nginx/html
+
