@@ -1,20 +1,20 @@
-apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: basic-website-deployment
-  namespace: default
+  name: basic-webpage
+  namespace: cicd  # Ensure the namespace is created, or remove this line to use the default namespace
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: basic-website
+      app: basic-webpage
   template:
     metadata:
       labels:
-        app: basic-website
+        app: basic-webpage
     spec:
       containers:
-      - name: basic-website-container
-        image: imshashannk/basic-website-using-html-css:latest
+      - name: basic-webpage
+        image: imshashannk/basic-website-using-html-css:latest  # Replace with your actual Docker Hub username and image tag
         ports:
         - containerPort: 80
+
