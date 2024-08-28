@@ -20,19 +20,7 @@ spec:
         - containerPort: 80
 
 
-'''
-apiVersion: v1
-kind: Service
-metadata:
-  name: basic-webpage-service
-  namespace: cicd  # Ensure the namespace is created, or remove this line to use the default namespace
-spec:
-  selector:
-    app: basic-webpage
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: NodePort
+
+
 
 
